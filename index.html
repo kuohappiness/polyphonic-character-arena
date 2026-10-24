@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>字音比較配對</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="home-screen" id="homeScreen">
+      <div class="home-stage">
+        <p class="home-kicker">多音字資料庫</p>
+        <h1 class="home-title">多音字擂台</h1>
+        <form class="search-panel" id="searchForm">
+          <input id="searchInput" type="search" placeholder="輸入多音字，例如：量" aria-label="搜尋多音字" />
+          <button class="primary" type="submit">搜尋</button>
+        </form>
+        <div class="lesson-grid" id="lessonGrid" aria-label="多音字遊戲列表"></div>
+        <p class="empty-result hidden" id="emptyResult">目前找不到這個字的遊戲。</p>
+      </div>
+    </section>
+
+    <div class="game-shell hidden" id="gameShell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">字音比較</p>
+          <h1><span id="targetChar">量</span> 的讀音配對</h1>
+        </div>
+        <div class="status-strip" aria-live="polite">
+          <span>題目 <b id="roundNow">0</b>/<b id="roundTotal">0</b></span>
+          <span>答對 <b id="scoreNow">0</b></span>
+          <span>待複習 <b id="missNow">0</b></span>
+        </div>
+      </header>
+
+      <main class="sky" id="sky">
+        <div class="stars" aria-hidden="true"></div>
+        <section class="play-area" id="playArea" aria-label="字音比較配對遊戲">
+          <div class="message hidden" id="message"></div>
+          <div class="explosion hidden" id="explosion" aria-hidden="true">
+            <div class="blast-base"></div>
+            <div class="blast-column"></div>
+            <div class="blast-cloud cloud-a"></div>
+            <div class="blast-cloud cloud-b"></div>
+            <div class="blast-cloud cloud-c"></div>
+            <div class="blast-ring"></div>
+          </div>
+          <div class="fall-zone" id="fallZone"></div>
+          <div class="danger-line"></div>
+
+          <section class="aircraft-panel" aria-label="目前詞語">
+            <div class="word-glass">
+              <svg class="airplane" viewBox="0 0 240 360" role="img" aria-label="機頭朝上的飛機">
+                <path class="plane-shadow" d="M63 318c14-16 100-17 114 0 8 11-3 22-54 22-55 0-68-10-60-22Z" />
+                <path class="plane-wing main-wing-left" d="M102 158 18 232l20 33 72-38 9-64Z" />
+                <path class="plane-wing main-wing-right" d="M138 158l84 74-20 33-72-38-9-64Z" />
+                <path class="plane-body" d="M120 18c25 32 38 78 38 139v92c0 45-14 72-38 93-24-21-38-48-38-93v-92c0-61 13-107 38-139Z" />
+                <path class="plane-nose" d="M120 18c15 20 25 44 31 72h-62c6-28 16-52 31-72Z" />
+                <path class="plane-cockpit" d="M120 84c17 0 29 18 31 51h-62c2-33 14-51 31-51Z" />
+                <path class="tail-wing left-tail" d="M86 272 35 314l17 24 48-28 7-35Z" />
+                <path class="tail-wing right-tail" d="M154 272l51 42-17 24-48-28-7-35Z" />
+                <path class="tail-fin" d="M120 246l23 68h-46l23-68Z" />
+                <circle class="plane-mark" cx="61" cy="250" r="8" />
+                <circle class="plane-mark" cx="179" cy="250" r="8" />
+              </svg>
+              <p class="word-label">詞語</p>
+              <strong id="wordText">準備</strong>
+            </div>
+          </section>
+        </section>
+      </main>
+
+      <footer class="controlbar">
+        <button id="homeButton" type="button">首頁</button>
+        <button class="primary" id="startButton" type="button">開始</button>
+        <button id="pauseButton" type="button">暫停</button>
+        <button id="restartButton" type="button">重來</button>
+        <button id="printButton" type="button">輸出錯題 PDF</button>
+      </footer>
+    </div>
+
+    <div class="finish-overlay hidden" id="finishOverlay" aria-live="polite">
+      <div class="finish-card">
+        <p>完成</p>
+        <strong id="finishChar">量</strong>
+        <span id="finishText">這個字的讀音都配對完成</span>
+        <div class="finish-actions">
+          <button class="primary" id="finishRestart" type="button">再玩一次</button>
+          <button id="finishPrint" type="button">錯題輸出 PDF</button>
+          <button id="finishHome" type="button">回首頁</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="printReport" class="print-report"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
