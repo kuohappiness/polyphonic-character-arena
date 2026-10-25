@@ -1,5 +1,72 @@
 const LESSONS = [
   {
+    char: "行",
+    readings: ["ㄏㄤˊ", "ㄒㄧㄥˊ", "ㄒㄧㄥˋ"],
+    words: [
+      { text: "排行", reading: "ㄏㄤˊ" },
+      { text: "銀行", reading: "ㄏㄤˊ" },
+      { text: "商行", reading: "ㄏㄤˊ" },
+      { text: "行列", reading: "ㄏㄤˊ" },
+      { text: "字裡行間", reading: "ㄏㄤˊ" },
+      { text: "各行各業", reading: "ㄏㄤˊ" },
+      { text: "內行", reading: "ㄏㄤˊ" },
+      { text: "品行", reading: "ㄒㄧㄥˋ" },
+      { text: "德行", reading: "ㄒㄧㄥˋ" },
+      { text: "行草", reading: "ㄒㄧㄥˊ" },
+      { text: "行楷", reading: "ㄒㄧㄥˊ" },
+      { text: "行將就木", reading: "ㄒㄧㄥˊ" },
+      { text: "行李", reading: "ㄒㄧㄥˊ" },
+      { text: "行為", reading: "ㄒㄧㄥˊ" },
+      { text: "行動", reading: "ㄒㄧㄥˊ" },
+      { text: "你真行", reading: "ㄒㄧㄥˊ" },
+      { text: "通行", reading: "ㄒㄧㄥˊ" },
+      { text: "流行", reading: "ㄒㄧㄥˊ" },
+      { text: "風行一時", reading: "ㄒㄧㄥˊ" },
+      { text: "行不行", reading: "ㄒㄧㄥˊ" },
+      { text: "舉行", reading: "ㄒㄧㄥˊ" },
+      { text: "行醫", reading: "ㄒㄧㄥˊ" },
+      { text: "行善", reading: "ㄒㄧㄥˊ" }
+    ]
+  },
+  {
+    char: "和",
+    readings: ["ㄏㄜˊ", "ㄏㄢˋ", "ㄏㄨㄛˋ", "ㄏㄜˋ"],
+    words: [
+      { text: "和諧", reading: "ㄏㄜˊ" },
+      { text: "和好如初", reading: "ㄏㄜˊ" },
+      { text: "和平", reading: "ㄏㄜˊ" },
+      { text: "和藹可親", reading: "ㄏㄜˊ" },
+      { text: "和風日麗", reading: "ㄏㄜˊ" },
+      { text: "我和你", reading: "ㄏㄢˋ" },
+      { text: "和麵", reading: "ㄏㄨㄛˋ" },
+      { text: "攪和", reading: "ㄏㄨㄛˋ" },
+      { text: "唱和", reading: "ㄏㄜˋ" },
+      { text: "附和", reading: "ㄏㄜˋ" }
+    ]
+  },
+  {
+    char: "空",
+    readings: ["ㄎㄨㄥ", "ㄎㄨㄥˋ"],
+    words: [
+      { text: "空屋", reading: "ㄎㄨㄥ" },
+      { text: "空中", reading: "ㄎㄨㄥ" },
+      { text: "高空", reading: "ㄎㄨㄥ" },
+      { text: "晴空", reading: "ㄎㄨㄥ" },
+      { text: "星空", reading: "ㄎㄨㄥ" },
+      { text: "空言", reading: "ㄎㄨㄥ" },
+      { text: "空談", reading: "ㄎㄨㄥ" },
+      { text: "空曠", reading: "ㄎㄨㄥ" },
+      { text: "海闊天空", reading: "ㄎㄨㄥ" },
+      { text: "空出來", reading: "ㄎㄨㄥˋ" },
+      { text: "空下來", reading: "ㄎㄨㄥˋ" },
+      { text: "虧空", reading: "ㄎㄨㄥˋ" },
+      { text: "空白", reading: "ㄎㄨㄥˋ" },
+      { text: "空閒", reading: "ㄎㄨㄥˋ" },
+      { text: "有空來玩", reading: "ㄎㄨㄥˋ" },
+      { text: "空歡喜一場", reading: "ㄎㄨㄥˋ" }
+    ]
+  },
+  {
     char: "量",
     readings: ["ㄌㄧㄤˊ", "ㄌㄧㄤˋ"],
     words: [
@@ -25,28 +92,6 @@ const LESSONS = [
       { text: "倒閉", reading: "ㄉㄠˇ" },
       { text: "沖倒", reading: "ㄉㄠˇ" },
       { text: "摔倒", reading: "ㄉㄠˇ" }
-    ]
-  },
-  {
-    char: "空",
-    readings: ["ㄎㄨㄥ", "ㄎㄨㄥˋ"],
-    words: [
-      { text: "空屋", reading: "ㄎㄨㄥ" },
-      { text: "空中", reading: "ㄎㄨㄥ" },
-      { text: "高空", reading: "ㄎㄨㄥ" },
-      { text: "晴空", reading: "ㄎㄨㄥ" },
-      { text: "星空", reading: "ㄎㄨㄥ" },
-      { text: "空言", reading: "ㄎㄨㄥ" },
-      { text: "空談", reading: "ㄎㄨㄥ" },
-      { text: "空曠", reading: "ㄎㄨㄥ" },
-      { text: "海闊天空", reading: "ㄎㄨㄥ" },
-      { text: "空出來", reading: "ㄎㄨㄥˋ" },
-      { text: "空下來", reading: "ㄎㄨㄥˋ" },
-      { text: "虧空", reading: "ㄎㄨㄥˋ" },
-      { text: "空白", reading: "ㄎㄨㄥˋ" },
-      { text: "空閒", reading: "ㄎㄨㄥˋ" },
-      { text: "有空來玩", reading: "ㄎㄨㄥˋ" },
-      { text: "空歡喜一場", reading: "ㄎㄨㄥˋ" }
     ]
   },
   {
@@ -136,51 +181,6 @@ const LESSONS = [
       { text: "挑撥離間", reading: "ㄐㄧㄢˋ" },
       { text: "間雜", reading: "ㄐㄧㄢˋ" },
       { text: "黑白相間", reading: "ㄐㄧㄢˋ" }
-    ]
-  },
-  {
-    char: "行",
-    readings: ["ㄏㄤˊ", "ㄒㄧㄥˊ", "ㄒㄧㄥˋ"],
-    words: [
-      { text: "排行", reading: "ㄏㄤˊ" },
-      { text: "銀行", reading: "ㄏㄤˊ" },
-      { text: "商行", reading: "ㄏㄤˊ" },
-      { text: "行列", reading: "ㄏㄤˊ" },
-      { text: "字裡行間", reading: "ㄏㄤˊ" },
-      { text: "各行各業", reading: "ㄏㄤˊ" },
-      { text: "內行", reading: "ㄏㄤˊ" },
-      { text: "品行", reading: "ㄒㄧㄥˋ" },
-      { text: "德行", reading: "ㄒㄧㄥˋ" },
-      { text: "行草", reading: "ㄒㄧㄥˊ" },
-      { text: "行楷", reading: "ㄒㄧㄥˊ" },
-      { text: "行將就木", reading: "ㄒㄧㄥˊ" },
-      { text: "行李", reading: "ㄒㄧㄥˊ" },
-      { text: "行為", reading: "ㄒㄧㄥˊ" },
-      { text: "行動", reading: "ㄒㄧㄥˊ" },
-      { text: "你真行", reading: "ㄒㄧㄥˊ" },
-      { text: "通行", reading: "ㄒㄧㄥˊ" },
-      { text: "流行", reading: "ㄒㄧㄥˊ" },
-      { text: "風行一時", reading: "ㄒㄧㄥˊ" },
-      { text: "行不行", reading: "ㄒㄧㄥˊ" },
-      { text: "舉行", reading: "ㄒㄧㄥˊ" },
-      { text: "行醫", reading: "ㄒㄧㄥˊ" },
-      { text: "行善", reading: "ㄒㄧㄥˊ" }
-    ]
-  },
-  {
-    char: "和",
-    readings: ["ㄏㄜˊ", "ㄏㄢˋ", "ㄏㄨㄛˋ", "ㄏㄜˋ"],
-    words: [
-      { text: "和諧", reading: "ㄏㄜˊ" },
-      { text: "和好如初", reading: "ㄏㄜˊ" },
-      { text: "和平", reading: "ㄏㄜˊ" },
-      { text: "和藹可親", reading: "ㄏㄜˊ" },
-      { text: "和風日麗", reading: "ㄏㄜˊ" },
-      { text: "我和你", reading: "ㄏㄢˋ" },
-      { text: "和麵", reading: "ㄏㄨㄛˋ" },
-      { text: "攪和", reading: "ㄏㄨㄛˋ" },
-      { text: "唱和", reading: "ㄏㄜˋ" },
-      { text: "附和", reading: "ㄏㄜˋ" }
     ]
   },
   {
