@@ -393,7 +393,7 @@ function resetGame() {
   hideExplosion();
   clearBombs();
   updateStats();
-  setMessage("準備", false);
+  setMessage("準備");
 }
 
 function startGame() {
@@ -420,7 +420,7 @@ function pauseGame() {
   document.querySelectorAll(".bomb").forEach((bomb) => {
     bomb.style.animationPlayState = state.paused ? "paused" : "running";
   });
-  if (state.paused) setMessage("暫停", false);
+  if (state.paused) setMessage("暫停");
   else clearMessage();
 }
 
@@ -434,12 +434,12 @@ function nextQuestion() {
     if (state.missed.length > 0) {
       state.pending = shuffle(state.missed);
       state.missed = [];
-      setMessage("再複習剛才沒有配對好的詞。", false);
+      setMessage("再複習剛才沒有配對好的詞");
       updateStats();
       state.timer = setTimeout(() => {
         clearMessage();
         nextQuestion();
-      }, 900);
+      }, 2200);
       return;
     }
     finishGame();
@@ -482,13 +482,13 @@ function chooseReading(reading, bomb) {
     state.locked = true;
     state.score += 1;
     bomb.classList.add("correct");
-    setMessage("答對", false);
+    setMessage("答對了！", "correct");
     updateStats();
     state.timer = setTimeout(() => {
       state.locked = false;
       clearMessage();
       nextQuestion();
-    }, 520);
+    }, 1000);
   } else {
     showWrong(bomb, false);
   }
@@ -512,14 +512,14 @@ function showWrong(selectedBomb, timedOut) {
 
   if (selectedBomb) selectedBomb.classList.add("wrong");
   const prefix = timedOut ? "落地了" : "再看一次";
-  setMessage(`${prefix}：${state.current.text} 讀作 ${state.current.reading}`, true);
+  setMessage(prefix, "danger", `${state.current.text} 讀作 ${state.current.reading}`);
   updateStats();
 
   state.timer = setTimeout(() => {
     state.locked = false;
     clearMessage();
     nextQuestion();
-  }, 2500);
+  }, 5000);
 }
 
 function finishGame() {
@@ -571,7 +571,7 @@ function recordMistake(reason, chosen) {
 
 function printMistakes() {
   if (state.mistakes.length === 0) {
-    setMessage("目前沒有錯題可以輸出。", false);
+    setMessage("目前沒有錯題可以輸出。");
     return;
   }
 
@@ -648,9 +648,12 @@ function resumeBombs() {
   });
 }
 
-function setMessage(text, danger) {
-  els.message.textContent = text;
-  els.message.classList.toggle("danger", danger);
+function setMessage(text, tone = "", detail = "") {
+  els.message.innerHTML =
+    `<strong class="message-title">${escapeHtml(text)}</strong>` +
+    (detail ? `<span class="message-detail">${escapeHtml(detail)}</span>` : "");
+  els.message.classList.toggle("danger", tone === "danger");
+  els.message.classList.toggle("correct", tone === "correct");
   els.message.classList.remove("hidden");
 }
 
