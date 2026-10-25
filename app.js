@@ -1,5 +1,53 @@
 const LESSONS = [
   {
+    char: "好",
+    readings: ["ㄏㄠˇ", "ㄏㄠˋ"],
+    words: [
+      { text: "好人", reading: "ㄏㄠˇ" },
+      { text: "花好月圓", reading: "ㄏㄠˇ" },
+      { text: "友好", reading: "ㄏㄠˇ" },
+      { text: "好同學", reading: "ㄏㄠˇ" },
+      { text: "好辦", reading: "ㄏㄠˇ" },
+      { text: "好去找你", reading: "ㄏㄠˇ" },
+      { text: "好久", reading: "ㄏㄠˇ" },
+      { text: "好厲害", reading: "ㄏㄠˇ" },
+      { text: "好客", reading: "ㄏㄠˋ" },
+      { text: "好大喜功", reading: "ㄏㄠˋ" },
+      { text: "各有所好", reading: "ㄏㄠˋ" }
+    ]
+  },
+  {
+    char: "吐",
+    readings: ["ㄊㄨˇ", "ㄊㄨˋ"],
+    words: [
+      { text: "吐痰", reading: "ㄊㄨˇ" },
+      { text: "吐露", reading: "ㄊㄨˇ" },
+      { text: "一吐為快", reading: "ㄊㄨˇ" },
+      { text: "談吐優雅", reading: "ㄊㄨˇ" },
+      { text: "吐血", reading: "ㄊㄨˋ" },
+      { text: "吐出公款", reading: "ㄊㄨˋ" }
+    ]
+  },
+  {
+    char: "與",
+    readings: ["ㄩˇ", "ㄩˋ"],
+    words: [
+      { text: "男與女", reading: "ㄩˇ" },
+      { text: "與民同樂", reading: "ㄩˇ" },
+      { text: "與生俱來", reading: "ㄩˇ" },
+      { text: "贈與", reading: "ㄩˇ" },
+      { text: "授與", reading: "ㄩˇ" },
+      { text: "與人方便", reading: "ㄩˇ" },
+      { text: "與人為善", reading: "ㄩˇ" },
+      { text: "選賢與能", reading: "ㄩˇ" },
+      { text: "時不我與", reading: "ㄩˇ" },
+      { text: "民胞物與", reading: "ㄩˇ" },
+      { text: "參與", reading: "ㄩˋ" },
+      { text: "與會", reading: "ㄩˋ" },
+      { text: "與賽", reading: "ㄩˋ" }
+    ]
+  },
+  {
     char: "行",
     readings: ["ㄏㄤˊ", "ㄒㄧㄥˊ", "ㄒㄧㄥˋ"],
     words: [
@@ -49,18 +97,21 @@ const LESSONS = [
     readings: ["ㄎㄨㄥ", "ㄎㄨㄥˋ"],
     words: [
       { text: "空屋", reading: "ㄎㄨㄥ" },
+      { text: "空虛", reading: "ㄎㄨㄥ" },
       { text: "空中", reading: "ㄎㄨㄥ" },
       { text: "高空", reading: "ㄎㄨㄥ" },
       { text: "晴空", reading: "ㄎㄨㄥ" },
       { text: "星空", reading: "ㄎㄨㄥ" },
       { text: "空言", reading: "ㄎㄨㄥ" },
       { text: "空談", reading: "ㄎㄨㄥ" },
+      { text: "空闊", reading: "ㄎㄨㄥ" },
       { text: "空曠", reading: "ㄎㄨㄥ" },
       { text: "海闊天空", reading: "ㄎㄨㄥ" },
       { text: "空出來", reading: "ㄎㄨㄥˋ" },
       { text: "空下來", reading: "ㄎㄨㄥˋ" },
       { text: "虧空", reading: "ㄎㄨㄥˋ" },
       { text: "空白", reading: "ㄎㄨㄥˋ" },
+      { text: "空地", reading: "ㄎㄨㄥˋ" },
       { text: "空閒", reading: "ㄎㄨㄥˋ" },
       { text: "有空來玩", reading: "ㄎㄨㄥˋ" },
       { text: "空歡喜一場", reading: "ㄎㄨㄥ" }
