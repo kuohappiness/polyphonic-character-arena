@@ -63,7 +63,7 @@ const LESSONS = [
       { text: "空白", reading: "ㄎㄨㄥˋ" },
       { text: "空閒", reading: "ㄎㄨㄥˋ" },
       { text: "有空來玩", reading: "ㄎㄨㄥˋ" },
-      { text: "空歡喜一場", reading: "ㄎㄨㄥˋ" }
+      { text: "空歡喜一場", reading: "ㄎㄨㄥ" }
     ]
   },
   {
@@ -540,7 +540,7 @@ function printMistakes() {
     .join("");
 
   els.printReport.innerHTML = `
-    <h1>字音比較錯題</h1>
+    <h1>多音字擂台錯題</h1>
     <p>目標字：${escapeHtml(currentLesson().char)}</p>
     <table>
       <thead>
